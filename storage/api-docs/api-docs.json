@@ -1,0 +1,30 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Сервис API",
+        "description": " работаем с данными ",
+        "version": "v0.1"
+    },
+    "servers": [
+        {
+            "url": "http://localhost",
+            "description": "Локальный тест "
+        }
+    ],
+    "paths": {
+        "/api/didrive-info": {
+            "get": {
+                "tags": [
+                    "didrive"
+                ],
+                "summary": "Показ инфы о дидрайве showInfo",
+                "operationId": "didriveInfo",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    }
+}
