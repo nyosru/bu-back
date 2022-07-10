@@ -1,4 +1,4 @@
-name: Deploy77
+name: Deploy2
 
 on:
   push:
@@ -38,7 +38,7 @@ jobs:
         # #   script: cd ${{ secrets.PROJECT_PATH }} && git pull https://github.com/nyosru/bu-back.git main && /opt/php74/bin/php composer.phar i && npm install && npm run build
         #   script: cd ${{ secrets.PROJECT_PATH }} && git pull https://github.com/nyosru/bu-back.git main --force
 
-      - name: Push to server5
+      - name: pull on server
         uses: appleboy/ssh-action@master
         with:
           # host: ${{ secrets.HOST }}
@@ -50,4 +50,5 @@ jobs:
           # port: ${{ secrets.PORT }}
           # script: ls
           # script: cd ${{ secrets.PROJECT_PATH }} && git pull https://github.com/nyosru/bu-back.git main --force
-          script: cd www && cd gg && git pull https://github.com/nyosru/bu-back.git main --force
+          # script: cd www && cd gg && git pull https://github.com/nyosru/bu-back.git main --force
+          script: cd www && cd gg && git pull
