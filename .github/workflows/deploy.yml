@@ -82,7 +82,8 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           # script: cd www && cd gg && /opt/php74/bin/php ./composer.phar i && npm i && npm run prod
-          script: cd www && cd gg && /opt/php74/bin/php ./composer.phar i && npm i && npm run dev
+          # script: cd www && cd gg && /opt/php74/bin/php ./composer.phar i && npm i && npm run dev
+          script: cd www && cd gg && /opt/php74/bin/php ./composer.phar i 
 
 
       # - name: Install 🔧
