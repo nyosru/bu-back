@@ -51,4 +51,5 @@ jobs:
           # script: ls
           # script: cd ${{ secrets.PROJECT_PATH }} && git pull https://github.com/nyosru/bu-back.git main --force
           # script: cd www && cd gg && git pull https://github.com/nyosru/bu-back.git main --force
-          script: cd www && cd gg && git pull
+          # script: cd www && cd gg && git pull
+          script: cd www && cd gg && git stash save && git merge origin/main && git stash pop
