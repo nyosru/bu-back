@@ -48,4 +48,5 @@ jobs:
           # password: ${{ secrets.PASSWORD }}
           password: ${{ secrets.SERVER_PASSWORD }}
           # port: ${{ secrets.PORT }}
-          script: ls
+          # script: ls
+          script: cd ${{ secrets.PROJECT_PATH }} && git pull https://github.com/nyosru/bu-back.git main --force
