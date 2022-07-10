@@ -53,12 +53,13 @@ jobs:
           # script: cd www && cd gg && git pull https://github.com/nyosru/bu-back.git main --force
           # script: cd www && cd gg && git pull
           # script: cd www && cd gg && git stash save && git merge origin/main && git stash pop
-          script: cd www && cd gg && git pull https://github.com/nyosru/bu-back.git main -f > /dev/null
+          # script: cd www && cd gg && git pull https://github.com/nyosru/bu-back.git main -f > /dev/null
+          script: cd www && cd gg && git pull https://github.com/nyosru/bu-back.git main -rebase > /dev/null
           # script: cd www && cd gg && git pull https://github.com/nyosru/bu-back.git main --rebase
           # script: cd www && cd gg && git pull git@github.com:nyosru/bu-back.git
 
-      - name: Install 🔧
-        run: npm install
+      # - name: Install 🔧
+      #   run: npm install
 
-      - name: Run Test 🔨
-        run: npm run test
+      # - name: Run Test 🔨
+      #   run: npm run test
