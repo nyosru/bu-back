@@ -36,7 +36,14 @@ jobs:
         #   password: ${{ secrets.SERVER_PASSWORD }}
         # #   # script: cd ${{ secrets.PROJECT_PATH }} && git pull https://${{ secrets.GIT_TOKEN }}:x-oauth-basic@github.com/susomejias/portfolio.git master && npm install && ng build --prod && cp htaccess dist/portfolio/
         # #   script: cd ${{ secrets.PROJECT_PATH }} && git pull https://github.com/nyosru/bu-back.git main && /opt/php74/bin/php composer.phar i && npm install && npm run build
-        #   script: cd ${{ secrets.PROJECT_PATH }} && git pull https://github.com/nyosru/bu-back.git main --force
+        #   script: cd ${{ secrets.P
+        
+
+      - name: cfg git
+        run:   git config --global user.email "1@php-cat.com"
+      
+      - name: cfg git2
+        run:   git config --global user.name "Sergey"
 
       - name: pull on server
         uses: appleboy/ssh-action@master
@@ -58,6 +65,7 @@ jobs:
           # script: cd www && cd gg && git pull https://github.com/nyosru/bu-back.git main --rebase
           # script: cd www && cd gg && git pull git@github.com:nyosru/bu-back.git
           script: cd www && cd gg && git stash save && git pull https://github.com/nyosru/bu-back.git main --force && git stash pop
+          
 
       # - name: Install 🔧
       #   run: npm install
