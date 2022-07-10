@@ -1,4 +1,4 @@
-name: Deploy3
+name: Deploy5
 
 on:
   push:
@@ -39,12 +39,6 @@ jobs:
         #   script: cd ${{ secrets.P
         
 
-      - name: cfg git
-        run:   git config --global user.email "1@php-cat.com"
-      
-      - name: cfg git2
-        run:   git config --global user.name "Sergey"
-
       - name: pull on server
         uses: appleboy/ssh-action@master
         with:
@@ -64,7 +58,7 @@ jobs:
           # script: cd www && cd gg && git pull https://github.com/nyosru/bu-back.git main --rebase:true > /dev/null
           # script: cd www && cd gg && git pull https://github.com/nyosru/bu-back.git main --rebase
           # script: cd www && cd gg && git pull git@github.com:nyosru/bu-back.git
-          script: cd www && cd gg && git stash save && git pull https://github.com/nyosru/bu-back.git main --force && git stash pop
+          script: cd www && cd gg && git config --global user.email "1@php-cat.com" && git config --global user.name "Sergey" && git stash save && git pull https://github.com/nyosru/bu-back.git main --force && git stash pop
           
 
       # - name: Install 🔧
