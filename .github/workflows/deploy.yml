@@ -81,7 +81,8 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
-          script: cd www && cd gg && /opt/php74/bin/php ./composer.phar i && npm i && npm run prod
+          # script: cd www && cd gg && /opt/php74/bin/php ./composer.phar i && npm i && npm run prod
+          script: cd www && cd gg && /opt/php74/bin/php ./composer.phar i && npm i && npm run dev
 
 
       # - name: Install 🔧
