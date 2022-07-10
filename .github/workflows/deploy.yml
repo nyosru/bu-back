@@ -1,4 +1,4 @@
-name: Deploy9
+name: Deploy10
 
 on:
   push:
@@ -71,7 +71,8 @@ jobs:
           # script: cd www && cd gg && git pull https://github.com/nyosru/bu-back.git main
           # script: cd www && cd gg && git config --global user.email "1@php-cat.com" && git config --global user.name "Sergey" && git stash save && git pull https://github.com/nyosru/bu-back.git main --force && git stash drop
           # script: cd www && cd gg && git config --global user.email "1@php-cat.com" && git config --global user.name "Sergey" && git checkout -t -f origin/main && git pull
-          script: cd www && cd gg && git config --global user.email "1@php-cat.com" && git config --global user.name "Sergey" && git checkout main && git pull
+          # script: cd www && cd gg && git config --global user.email "1@php-cat.com" && git config --global user.name "Sergey" && git checkout main && git pull
+          script: cd www && cd gg && git config --global user.email "1@php-cat.com" && git config --global user.name "Sergey" && git commit -m "My message" && git pull
           
       - name: pull on server1122
         uses: appleboy/ssh-action@master
