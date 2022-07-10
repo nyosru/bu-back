@@ -1,4 +1,4 @@
-name: Deploy5
+name: Deploy6
 
 on:
   push:
@@ -39,6 +39,15 @@ jobs:
         #   script: cd ${{ secrets.P
         
 
+      - name: pull on server11
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          script: cd www && cd gg && ls
+          
+
       - name: pull on server
         uses: appleboy/ssh-action@master
         with:
@@ -63,7 +72,8 @@ jobs:
           
 
       # - name: Install 🔧
-      #   run: npm install
+      # #   run: npm install
+      #   run: npm ci
 
       # - name: Run Test 🔨
       #   run: npm run test
