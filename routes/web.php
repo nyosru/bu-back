@@ -13,14 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 use App\Http\Controllers\BuController;
 
-
 Route::get('/cat/{id}/{name?}', [ BuController::class , 'showCatalog' ] );
 Route::get('/cat/{id}/{name?}', [ BuController::class , 'showItem' ] );
-Route::get('/', [ BuController::class , 'showIndex' ] );
+// Route::get('/', [ BuController::class , 'showIndex' ] );
