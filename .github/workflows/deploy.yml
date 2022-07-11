@@ -52,7 +52,7 @@ jobs:
       #     password: ${{ secrets.SERVER_PASSWORD }}
       #     script: cd www && cd gg && ls && rm -rf *
 
-      - name: pull on server
+      - name: git pull on server
         uses: appleboy/ssh-action@master
         with:
           # host: ${{ secrets.HOST }}
@@ -80,7 +80,7 @@ jobs:
           # script: cd www && cd gg && git config --global user.email "1@php-cat.com" && git config --global user.name "Sergey" && git add . -f &&  git commit -m "My message" && git pull https://github.com/nyosru/bu-back.git main --force -r
           script: cd www && cd gg && git config --global user.email "1@php-cat.com" && git config --global user.name "Sergey" && git fetch --all && git reset --hard origin/main
           
-      - name: setup po on server
+      - name: setup composer pacs on server
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SERVER_IP }}
