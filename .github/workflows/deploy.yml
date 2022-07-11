@@ -52,6 +52,15 @@ jobs:
       #     password: ${{ secrets.SERVER_PASSWORD }}
       #     script: cd www && cd gg && ls && rm -rf *
 
+
+      - uses: actions/checkout@v1
+      - name: codesniffer-php
+        uses: hrysd/action-php_codesniffer@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          standard: PSR12
+          target_directory: src
+
       - name: git pull on server
         uses: appleboy/ssh-action@master
         with:
