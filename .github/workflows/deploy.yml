@@ -12,11 +12,11 @@ jobs:
     #   matrix:
     #     node-version: [12.x]
     steps:
-    
-      - uses: actions/checkout@v2
 
-      - name: unit tests
-        uses: nathanheffley/laravel-phpunit-action@master
+      # - uses: actions/checkout@v2
+
+      # - name: unit tests
+      #   uses: nathanheffley/laravel-phpunit-action@master
 
       # - uses: actions/setup-node@v1
       #   with:
